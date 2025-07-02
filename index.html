@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Temperature Converter</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>🌡️Temperature Converter</h2>
+        <p class="subtitle">Convert between Celsius, Fahrenheit, and Kelvin</p>
+
+        <form id="converter-form">
+            <label for="temperature">Temperature Value (°C):</label>
+            <input type="number" id="input-temperature" step="any" placeholder="Enter temperature...">
+
+            <select id="from-unit" required>
+                <option value="">Select scale</option>
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+            </select>
+
+            <p>to</p>
+
+            <select id="to-unit" required>
+                <option value="">Select scale</option>
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+            </select>
+
+            <button value="convertTemp()" class="convert-btn" onclick="convertTemp()">Convert</button>
+            <h3 id="result"></h3>
+            <button type="button" class="clear-btn" onclick="clearForm()">Clear All</button>
+            <h3 id="formula"></h3>
+        </form>
+
+        <div class="footer">
+            <p>Built for ProDigy InfoTech</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
